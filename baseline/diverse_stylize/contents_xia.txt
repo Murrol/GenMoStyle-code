@@ -1,0 +1,8 @@
+fast_punching
+fast_walking
+jumping
+kicking
+punching
+running
+transitions
+normal_walking

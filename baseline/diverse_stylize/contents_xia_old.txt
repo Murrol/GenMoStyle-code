@@ -1,0 +1,6 @@
+jumping
+kicking
+punching
+running
+transitions
+walking

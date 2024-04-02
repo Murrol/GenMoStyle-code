@@ -1,0 +1,27 @@
+Training scripts:
+python train.py --config config_my1603d
+
+Evaluation:
+python evaluate_bfa_v2.py --config config_my160eval3d --repeat_times 30 --gpu_id 0
+------------Summary motion unpair bfa 160--------------
+S_FID, Mean:0.413, Cint:0.023
+G_DIS, Mean:0.739, Cint:0.003
+GT_ACC, Mean:0.961, Cint:0.007
+FK_ACC, Mean:0.534, Cint:0.016
+
+python evaluate_cmu_v2.py --config config_my160eval3d --repeat_times 20 --gpu_id 1
+------------Summary motion unpair cmu 160--------------
+S_FID, Mean:0.508, Cint:0.011
+G_DIS, Mean:0.876, Cint:0.002
+GT_ACC, Mean:0.957, Cint:0.005
+FK_ACC, Mean:0.444, Cint:0.010
+
+python evaluate_xia_v2.py --config config_my160eval3d --repeat_times 30 --motion_length 16 --gpu_id 1
+------------Summary motion unpair xia 16--------------
+C_FID, Mean:0.679, Cint:0.012
+G_DIS, Mean:0.911, Cint:0.003
+GT_C_ACC, Mean:0.928, Cint:0.005
+FK_C_ACC, Mean:0.318, Cint:0.009
+FK_S_ACC, Mean:0.359, Cint:0.013
+
+python generate_cmu.py --config config_my160eval3d --gpu_id 1

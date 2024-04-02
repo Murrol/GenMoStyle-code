@@ -1,0 +1,57 @@
+Training scripts:
+python train.py --name diverse_v2
+
+Evaluation:
+ref style:
+python evaluate_bfa_v2.py  --mode test --load_latest --name diverse_v2 --gpu_ids 1
+------------Summary motion diverse bfa 160 iter diverse_v2_100000--------------
+S_FID, Mean:0.038, Cint:0.003
+G_DIS, Mean:0.531, Cint:0.001
+GT_ACC, Mean:0.994, Cint:0.002
+FK_ACC, Mean:0.891, Cint:0.007
+
+python evaluate_xia_v2.py  --mode test --load_latest --name diverse_v2 --gpu_ids 1 --motion_length 16
+Note: Frame axis is not deformable in the network, we repeat xia to 160 length during inference, and use the first copy for evaluation.
+------------Summary motion diverse xia 16 iter diverse_v2_100000--------------
+C_FID, Mean:0.381, Cint:0.010
+G_DIS, Mean:0.698, Cint:0.001
+GT_C_ACC, Mean:0.937, Cint:0.004
+FK_C_ACC, Mean:0.441, Cint:0.009
+FK_S_ACC, Mean:0.527, Cint:0.006
+
+python evaluate_cmu_v2.py  --mode test --load_latest --name diverse_v2 --gpu_ids 1 --repeat_times 20
+------------Summary motion diverse cmu 160 iter diverse_v2_100000--------------
+S_FID, Mean:0.136, Cint:0.011
+G_DIS, Mean:0.663, Cint:0.003
+GT_ACC, Mean:0.995, Cint:0.002
+FK_ACC, Mean:0.674, Cint:0.014
+
+
+label style:
+python evaluate_bfa_v2.py  --mode test --load_latest --name diverse_v2 --gpu_ids 1 --alter latent --sampling
+------------Summary motion diverse bfa 160 iter diverse_v2_100000--------------
+S_FID, Mean:0.013, Cint:0.001
+G_DIS, Mean:0.571, Cint:0.002
+GT_ACC, Mean:0.993, Cint:0.002
+FK_ACC, Mean:0.971, Cint:0.006
+DIV, Mean:0.146, Cint:0.009
+
+python evaluate_xia_v2.py  --mode test --load_latest --name diverse_v2 --gpu_ids 1 --motion_length 16 --alter latent --sampling
+------------Summary motion diverse xia 16 iter diverse_v2_100000--------------
+C_FID, Mean:0.507, Cint:0.011
+G_DIS, Mean:0.770, Cint:0.003
+GT_C_ACC, Mean:0.938, Cint:0.005
+FK_C_ACC, Mean:0.311, Cint:0.009
+FK_S_ACC, Mean:0.796, Cint:0.007
+DIV, Mean:0.175, Cint:0.014
+
+python evaluate_cmu_v2.py  --mode test --load_latest --name diverse_v2 --gpu_ids 1 --repeat_times 20 --alter latent --sampling
+------------Summary motion diverse cmu 160 iter diverse_v2_100000--------------
+S_FID, Mean:0.065, Cint:0.007
+G_DIS, Mean:0.693, Cint:0.004
+GT_ACC, Mean:0.994, Cint:0.001
+FK_ACC, Mean:0.813, Cint:0.010
+DIV, Mean:0.229, Cint:0.019
+
+python generate_cmu.py  --mode test --load_latest --name diverse_v2 --gpu_ids 1
+python generate_cmu.py  --mode test --load_latest --name diverse_v2 --gpu_ids 1 --alter latent

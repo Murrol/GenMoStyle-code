@@ -1,0 +1,28 @@
+Training scripts:
+python train.py --config configs/config_my160.yaml
+
+Evaluation:
+python evaluate_bfa_v2.py --config configs/config_eval160.yaml
+------------Summary motion puzzle bfa 160--------------
+S_FID, Mean:0.047, Cint:0.004
+G_DIS, Mean:0.569, Cint:0.003
+GT_ACC, Mean:0.994, Cint:0.003
+FK_ACC, Mean:0.833, Cint:0.010
+
+python evaluate_cmu_v2.py --repeat_times 20 --config configs/config_eval160.yaml
+------------Summary motion puzzle cmu 160--------------
+S_FID, Mean:0.058, Cint:0.004
+G_DIS, Mean:0.725, Cint:0.004
+GT_ACC, Mean:0.994, Cint:0.002
+FK_ACC, Mean:0.793, Cint:0.009
+
+python evaluate_xia_v2.py --repeat_times 30 --motion_length 16 --config configs/config_eval160.yaml
+------------Summary motion puzzle xia 16--------------
+C_FID, Mean:0.380, Cint:0.011
+G_DIS, Mean:0.857, Cint:0.004
+GT_C_ACC, Mean:0.938, Cint:0.004
+FK_C_ACC, Mean:0.337, Cint:0.017
+FK_S_ACC, Mean:0.658, Cint:0.009
+
+generate demo:
+python generate_cmu.py --config configs/config_eval160.yaml
