@@ -18,6 +18,9 @@ The baseline models are implemented in the subfolders (i.e. `./baseline/unpaired
 ### Baseline Scripts
 All training and testing scripts are documented in `./$baseline_path/eval_scripts.txt`. 
 
+### Misc
+Contact ymu3@ualberta.ca for further questions. A rough codebase for our method could be found through our OpenReview page ([Download](https://openreview.net/attachment?id=daEqXJ0yZo&name=supplementary_material)).
+
 ## Acknowledgement
 We have intensively borrow codes from the following repositories. Many thanks to the authors for sharing their codes.
 - [deep-motion-editing](https://github.com/DeepMotionEditing/deep-motion-editing)
