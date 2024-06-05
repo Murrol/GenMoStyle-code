@@ -1,5 +1,5 @@
 # Generative Human Motion Stylization in Latent Space, ICLR 2024
-### [[Project Page]](https://yxmu.foo/GenMoStyle/) [[Paper]](https://openreview.net/pdf?id=daEqXJ0yZo) [[Dataset]](https://drive.google.com/drive/u/1/folders/1Cnc0n8GhDrqjcP68_j5xb6qRx72aQXWX)[[Checkpoints]](https://drive.google.com/file/d/1yTDhGbD58-zmul33iA31fmtdYoJNqfil/view?usp=share_link)
+### [[Project Page]](https://yxmu.foo/GenMoStyle/) [[Paper]](https://openreview.net/pdf?id=daEqXJ0yZo) [[Dataset]](https://drive.google.com/drive/u/1/folders/1Cnc0n8GhDrqjcP68_j5xb6qRx72aQXWX) [[Checkpoints]](https://drive.google.com/file/d/1yTDhGbD58-zmul33iA31fmtdYoJNqfil/view?usp=share_link)
 ![teaser_image](./assets/teaser.png)
 The release of the training codes will be delayed due to company review requirements.
 
