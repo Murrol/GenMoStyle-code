@@ -11,12 +11,35 @@ The release of the training codes will be delayed due to company review requirem
 - [x] Add codes for dataset
 - [x] Add baseline implementations
 
-  
+## Generation Scripts
+
+<details>
+
+Motion_based (supervised): 
+```
+python generate_cmu_l.py --name LVAE_AE_RCE1_KGLE1_121_YL_ML160 --gpu_id 0 --dataset_name bfa --motion_length 160 --ext cmu_NSP_IK --use_style --batch_size 12 --use_ik --niters 1
+```
+
+Ours label_based (supervised): 
+```
+python generate_cmu_l.py --name LVAE_AE_RCE1_KGLE1_121_YL_ML160 --gpu_id 0 --dataset_name bfa --motion_length 160 --ext cmu_SP_IK --use_style --batch_size 12 --use_ik --niters 1 --sampling
+```
+
+Ours motion_based (unsupervised):
+```
+python generate_cmu_l.py --name LVAE_AE_RCE0_KGLE2_12E1_ML160 --gpu_id 0 --dataset_name bfa --motion_length 160 --ext cmu_SP_IK --batch_size 12 --use_ik --niters 1
+```
+</details>
+
 ## Baseline Implementations
+<details>
+
 The baseline models are implemented in the subfolders (i.e. `./baseline/unpaired_motion`, `./baseline/diverse_stylize`, `./baseline/motion_puzzle`), built from their offical implementations on github. For more details, please refer to the official repositories [Aberman et al.](https://github.com/DeepMotionEditing/deep-motion-editing), [Park et al.](https://github.com/soomean/Diverse-Motion-Stylization), [Jang et al.](https://github.com/DK-Jang/motion_puzzle).
 
 ### Baseline Scripts
 All training and testing scripts are documented in `./$baseline_path/eval_scripts.txt`. 
+
+</details>
 
 ### Misc
 Contact ymu3@ualberta.ca for further questions. A rough codebase for our method could be found through our OpenReview page ([Download](https://openreview.net/attachment?id=daEqXJ0yZo&name=supplementary_material)).
