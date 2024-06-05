@@ -4,7 +4,6 @@
 The release of the training codes will be delayed due to company review requirements.
 
 ## TODO
-- [ ] Add evaluation codes
 - [ ] Add training codes
 - [x] Add evaluation codes
 - [x] Release checkpoints
