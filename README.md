@@ -1,5 +1,5 @@
 # Generative Human Motion Stylization in Latent Space, ICLR 2024
-### [[Project Page]](https://yxmu.foo/GenMoStyle/) [[Paper]](https://openreview.net/pdf?id=daEqXJ0yZo) [[Dataset]](https://drive.google.com/drive/u/1/folders/1Cnc0n8GhDrqjcP68_j5xb6qRx72aQXWX) [[Checkpoints]](https://drive.google.com/file/d/1yTDhGbD58-zmul33iA31fmtdYoJNqfil/view?usp=share_link)
+### [[Project Page]](https://yxmu.foo/GenMoStyle/) [[Paper]](https://openreview.net/pdf?id=daEqXJ0yZo) [[Dataset]](https://drive.google.com/drive/u/1/folders/1Cnc0n8GhDrqjcP68_j5xb6qRx72aQXWX) [[Checkpoints]]([https://drive.google.com/file/d/1yTDhGbD58-zmul33iA31fmtdYoJNqfil/view?usp=share_link](https://drive.google.com/drive/u/1/folders/1Cnc0n8GhDrqjcP68_j5xb6qRx72aQXWX))
 ![teaser_image](./assets/teaser.png)
 The release of the training codes will be delayed due to company review requirements.
 
@@ -10,6 +10,9 @@ The release of the training codes will be delayed due to company review requirem
 - [x] Release processed dataset
 - [x] Add codes for dataset
 - [x] Add baseline implementations
+
+## Misc
+Contact ymu3@ualberta.ca for further questions. A rough codebase for our method could be found through our OpenReview page ([Download](https://openreview.net/attachment?id=daEqXJ0yZo&name=supplementary_material)).
 
 ## Generation Scripts
 
@@ -41,8 +44,6 @@ All training and testing scripts are documented in `./$baseline_path/eval_script
 
 </details>
 
-### Misc
-Contact ymu3@ualberta.ca for further questions. A rough codebase for our method could be found through our OpenReview page ([Download](https://openreview.net/attachment?id=daEqXJ0yZo&name=supplementary_material)).
 
 ## Acknowledgement
 We have intensively borrow codes from the following repositories. Many thanks to the authors for sharing their codes.
