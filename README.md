@@ -1,5 +1,5 @@
 # Generative Human Motion Stylization in Latent Space, ICLR 2024
-### [[Project Page]](https://yxmu.foo/GenMoStyle/) [[Paper]](https://openreview.net/pdf?id=daEqXJ0yZo) [[Dataset]](https://drive.google.com/drive/u/1/folders/1Cnc0n8GhDrqjcP68_j5xb6qRx72aQXWX) [[Checkpoints]](https://drive.google.com/drive/u/1/folders/1Cnc0n8GhDrqjcP68_j5xb6qRx72aQXWX)
+### [[Project Page]](https://yxmu.foo/GenMoStyle/) [[Paper]](https://openreview.net/pdf?id=daEqXJ0yZo) [[Dataset]](https://1sfu-my.sharepoint.com/:u:/g/personal/yma101_sfu_ca/EUkJII7Ms5hKrHduvby8URkBUKcmI-BjEAWo5jHOHGIiZg?e=a8xj8u) [[Checkpoints]](https://1sfu-my.sharepoint.com/:u:/g/personal/yma101_sfu_ca/Ebl4dXSKPHxPkB27p4sZozwBgNbPbnc5TRt-XFyqXmSGDw?e=gWvurU)
 ![teaser_image](./assets/teaser.png)
 The release of the training codes will be delayed due to company review requirements.
 
@@ -32,6 +32,38 @@ Ours motion_based (unsupervised):
 ```
 python generate_cmu_l.py --name LVAE_AE_RCE0_KGLE2_12E1_ML160 --gpu_id 0 --dataset_name bfa --motion_length 160 --ext cmu_SP_IK --batch_size 12 --use_ik --niters 1
 ```
+</details>
+
+## Training Scripts
+
+<details>
+
+Motion Auto-Encoder: 
+```
+python train_ae.py --name MAE_SMSE3_SPAE3_DZ512_DOWN2
+```
+(Optional) Motion Variational Auto-Encoder: 
+```
+python train_ae.py --name MVAE_KLDE3_DZ512_DOWN2 --use_vae
+```
+
+Latent Style Transfer VAE (unsupervised): 
+```
+python train_latent_vae.py --name LVAE_AE_RCE0_KGLE2_12E1_ML160
+```
+
+Latent Style Transfer VAE (supervised): 
+```
+python train_latent_vae.py --name LVAE_AE_RCE1_KGLE1_121_YL_ML160
+```
+
+Global Motion Regressor:
+```
+python train_regressor.py --name GLR_CV3_NP5_NS5_FT1
+```
+
+Please check the corresponding ` opt ` file for the detailed configuration of each checktpoint.
+
 </details>
 
 ## Baseline Implementations
